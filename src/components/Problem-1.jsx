@@ -21,7 +21,17 @@ const Problem1 = () => {
     // handle form submit
     const handleSubmit = e => {
       e.preventDefault();
-      setItems([...items, formData])
+      // Check if both name and status are truthy
+      if (formData.name && formData.status) {
+        // update new items
+        setItems([...items, formData]);
+        // clear the input fields
+        setFormData({ name: '', status: '' });
+      } else {
+        // Handle the case when either name or status is empty
+        // You can show an error message or take other appropriate actions
+        alert('Name & status must be filled.');
+      }
     }
 
     // filter the items
@@ -103,7 +113,7 @@ const Problem1 = () => {
                   filteredItems()?.map((item, index) =>
                     <tr key={index}>
                       <td>{item.name}</td>
-                      <td>{item.status}</td>
+                      <td>{item.status.toLowerCase()}</td>
                     </tr>
                   )
                 }
