@@ -1,25 +1,19 @@
-import React, { useEffect } from 'react';
+import AllContacts from './Contacts/AllContacts';
+import USContacts from './Contacts/USContacts';
 
 const Problem2 = () => {
-  useEffect(() => {
-    const fetchData = async () => {
-      const res = await fetch(`https://contact.mediusware.com/api/contacts/?page=1`);
-      const data = await res.json();
-      console.log(data.results);
-    }
-
-    fetchData();
-
-  }, [])
-
   return (
     <div className="container">
       <div className="row justify-content-center mt-5">
         <h4 className='text-center text-uppercase mb-5'>Problem-2</h4>
         
         <div className="d-flex justify-content-center gap-3">
-        <button className="btn btn-lg btn-outline-primary" type="button" >All Contacts</button>
-        <button className="btn btn-lg btn-outline-warning" type="button" >US Contacts</button>
+        <button className="btn btn-lg btn-outline-primary" type="button" >
+          <AllContacts />
+        </button>
+        <button className="btn btn-lg btn-outline-warning" type="button" >
+          <USContacts />
+        </button>
         </div>
           
       </div>
