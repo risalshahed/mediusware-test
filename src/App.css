@@ -6,7 +6,7 @@ button {
   cursor: pointer;
 }
 
-/* .contacts {
+.contacts {
   padding: 8px;
   border-bottom: 1px solid #ccc;
   font-size: 16px;
@@ -33,4 +33,4 @@ button {
   color: #000 !important;
   background-color: #fff !important;
   border-color: #ff7f50 !important;
-} */
+}
