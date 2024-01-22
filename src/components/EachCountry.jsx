@@ -13,6 +13,7 @@ const EachCountry = ({ contact, onClose }) => {
             <h6>Id: {contact.id}</h6>
             <h6>Country: {contact.country.name}</h6>
             <h6>Phone: {contact.phone}</h6>
+            {/* Add more contact details here */}
           </div>
         )}
       </Modal.Body>
